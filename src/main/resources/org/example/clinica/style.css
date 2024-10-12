@@ -41,39 +41,89 @@ and open the template in the editor.
     -fx-border-width: .8px;
 }
 
-.login-btn{
+.loginBtn{
     -fx-background-color:linear-gradient(to bottom, #1FE8DC, #235d72);
     -fx-text-fill: #fff;
     -fx-font-size: 14px;
     -fx-font-family: Arial;
     -fx-cursor:hand;
+    -fx-background-radius: 16px;
 }
-.login-btn:hover{
+.loginBtn:hover{
     -fx-background-color:linear-gradient(to bottom,#1FE8DC, #235d72);
 }
 
-.medico-btn{
+.medicoBtn{
     -fx-background-color:linear-gradient(to bottom, #1FE8DC, #235d72);
     -fx-text-fill: #fff;
     -fx-font-size: 14px;
     -fx-font-family: Arial;
     -fx-cursor:hand;
+    -fx-background-radius: 16px;
 }
-.medico-btn:hover{
+.medicoBtn:hover{
     -fx-background-color:linear-gradient(to bottom,#1FE8DC, #235d72);
 }
 
-.paciente-btn{
+.pacienteBtn{
     -fx-background-color:linear-gradient(to bottom, #1FE8DC, #235d72);
     -fx-text-fill: #fff;
     -fx-font-size: 14px;
     -fx-font-family: Arial;
     -fx-cursor:hand;
+    -fx-background-radius: 16px ;
 }
-.paciente-btn{
+.pacienteBtn{
     -fx-background-color:linear-gradient(to bottom,#1FE8DC, #235d72);
 }
 
+.marcarConsulta{
+    -fx-background-color:linear-gradient(to bottom, #1FE8DC, #235d72);
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+    -fx-cursor:hand;
+    -fx-background-radius: 16px ;
+}
+.marcarConsulta{
+    -fx-background-color:linear-gradient(to bottom,#1FE8DC, #235d72);
+}
+
+.verConsultas{
+    -fx-background-color:linear-gradient(to bottom, #1FE8DC, #235d72);
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+    -fx-cursor:hand;
+    -fx-background-radius: 16px ;
+}
+.verConsultas{
+    -fx-background-color:linear-gradient(to bottom,#1FE8DC, #235d72);
+}
+
+.realizarConsulta{
+    -fx-background-color:linear-gradient(to bottom, #1FE8DC, #235d72);
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+    -fx-cursor:hand;
+    -fx-background-radius: 16px ;
+}
+.realizarConsulta{
+    -fx-background-color:linear-gradient(to bottom,#1FE8DC, #235d72);
+}
+
+.verHistorico{
+    -fx-background-color:linear-gradient(to bottom, #1FE8DC, #235d72);
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+    -fx-cursor:hand;
+    -fx-background-radius: 16px ;
+}
+.verHistorico{
+    -fx-background-color:linear-gradient(to bottom,#1FE8DC, #235d72);
+}
 
 
 

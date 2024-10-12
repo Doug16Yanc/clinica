@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500" prefWidth="700" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.clinica.MedicoPageController">
+    <children>
+        <AnchorPane fx:id="main_form" prefHeight="500" prefWidth="700">
+            <children>
+                <AnchorPane layoutY="6.0" prefHeight="500" prefWidth="332.0" styleClass="left-form" stylesheets="@style.css">
+                    <Label layoutX="90.0" layoutY="13.0" text="Boas-vindas" textFill="WHITE">
+                        <font>
+                            <Font name="Arial" size="27.0" />
+                        </font>
+                    </Label>
+                    <ImageView layoutX="40" layoutY="50" >
+                        <image>
+                            <Image url="@images/doctor.png">
+                            </Image>
+                        </image>
+                    </ImageView>
+                    <children>
+                        <Label layoutX="40.0" layoutY="300.0" text="Consultório médico" textFill="WHITE">
+                            <font>
+                                <Font name="Arial" size="27.0"  />
+                            </font>
+                        </Label>
+                        <Label layoutX="70.0" layoutY="320.0" text="TEIC GRA" textFill="WHITE">
+                            <font>
+                                <Font name="Arial" size="40.0" />
+                            </font>
+                        </Label>
+
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="325.0" prefHeight="500" prefWidth="400" styleClass="right-form" stylesheets="@style.css">
+                    <ImageView fitHeight="80" fitWidth="80" layoutX="119.0" layoutY="36">
+                        <image>
+                            <Image url="@images/medical.png">
+                            </Image>
+                        </image>
+                    </ImageView>
+                    <Label layoutX="35.0" layoutY="110.0" text="Página do médico" textFill="#153293">
+                        <font>
+                            <Font name="Arial Bold" size="30.0" />
+                        </font>
+                    </Label>
+                    <Button fx:id="realizarConsulta" layoutX="63.0" layoutY="180.0" mnemonicParsing="false" onAction="#realizarConsulta" prefHeight="40.0" prefWidth="220.0" styleClass="realizarConsulta" stylesheets="@style.css" text="Realizar consulta" />
+                    <Button fx:id="verHistorico" layoutX="63.0" layoutY="230.0" mnemonicParsing="false" onAction="#verHistorico" prefHeight="40.0" prefWidth="220.0" styleClass="verHistorico" stylesheets="@style.css" text="Ver histórico" />
+                    <Button fx:id="sairBtn" layoutX="63.0" layoutY="280.0" mnemonicParsing="false" onAction="#sair" prefHeight="40.0" prefWidth="220.0" styleClass="sairBtn" stylesheets="@style.css" text="Sair" />
+
+
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

@@ -6,17 +6,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class InitialController {
-    @FXML
-    public Button pacienteBtn;
-    @FXML
-    public Button medicoBtn;
+public class LoginPacienteController {
     @FXML
     private Label welcomeText;
 
@@ -25,11 +20,9 @@ public class InitialController {
         welcomeText.setText("Welcome to JavaFX Application!");
     }
 
-    @FXML
-    public void pacienteBtn(ActionEvent actionEvent) {
-
+    public void login(ActionEvent actionEvent) {
         try {
-            Parent root = FXMLLoader.load(LoginPacienteApplication.class.getResource("login-paciente.fxml"));
+            Parent root = FXMLLoader.load(LoginPacienteApplication.class.getResource("paciente-page.fxml"));
             Stage stageAtual = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             stageAtual.close();
 
@@ -41,15 +34,6 @@ public class InitialController {
         }
     }
 
-    @FXML
-    public void medicoBtn(ActionEvent actionEvent) {
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("login-medico.fxml"));
-            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(root));
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public void close(ActionEvent actionEvent) {
     }
 }
