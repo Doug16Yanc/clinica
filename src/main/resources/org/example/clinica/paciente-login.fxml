@@ -27,7 +27,7 @@
             <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="400.0" layoutY="101.0">
                 <Image url="@images/medical.png" />
             </ImageView>
-            <Label layoutX="294.0" layoutY="300.0" text="Registro de Paciente" textFill="#153293">
+            <Label layoutX="294.0" layoutY="300.0" text="Login de Paciente" textFill="#153293">
                 <font>
                     <Font size="40.0" />
                 </font>
