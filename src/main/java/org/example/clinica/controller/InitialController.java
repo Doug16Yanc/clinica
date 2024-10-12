@@ -1,4 +1,4 @@
-package org.example.clinica;
+package org.example.clinica.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import org.example.clinica.application.LoginPacienteApplication;
 
 import java.io.IOException;
 import java.util.Objects;
