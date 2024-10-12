@@ -6,6 +6,8 @@ module org.example.clinica {
     requires com.dlsc.formsfx;
     requires org.kordamp.bootstrapfx.core;
 
-    opens org.example.clinica to javafx.fxml;
-    exports org.example.clinica;
+    opens org.example.clinica.controller to javafx.fxml;
+    opens org.example.clinica.application to javafx.fxml;
+    exports org.example.clinica.application;
+    exports org.example.clinica.controller;
 }
