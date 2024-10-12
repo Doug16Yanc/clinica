@@ -1,12 +1,3 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/*
-    Created on : 10 23, 22, 12:24:18 PM
-    Author     : WINDOWS 10
-*/
 
 .left-form{
     -fx-background-color:linear-gradient(to bottom right, #1FE8DC, #235d72);
@@ -47,33 +38,57 @@ and open the template in the editor.
     -fx-font-size: 14px;
     -fx-font-family: Arial;
     -fx-cursor:hand;
+    -fx-border-radius: 30px;
 }
 .login-btn:hover{
     -fx-background-color:linear-gradient(to bottom,#1FE8DC, #235d72);
 }
 
-.medico-btn{
+.medicoBtn{
     -fx-background-color:linear-gradient(to bottom, #1FE8DC, #235d72);
     -fx-text-fill: #fff;
     -fx-font-size: 14px;
     -fx-font-family: Arial;
     -fx-cursor:hand;
+    -fx-border-radius: 30px;
 }
-.medico-btn:hover{
+.medicoBt:hover{
     -fx-background-color:linear-gradient(to bottom,#1FE8DC, #235d72);
 }
 
-.paciente-btn{
+.pacienteBtn{
     -fx-background-color:linear-gradient(to bottom, #1FE8DC, #235d72);
     -fx-text-fill: #fff;
     -fx-font-size: 14px;
     -fx-font-family: Arial;
     -fx-cursor:hand;
+    -fx-border-radius: 30px;
 }
-.paciente-btn{
+.pacienteBtn{
     -fx-background-color:linear-gradient(to bottom,#1FE8DC, #235d72);
 }
 
+.marcarConsulta {
+    -fx-background-color:linear-gradient(to bottom, #0c701e, #235d72);
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+    -fx-cursor:hand;
+    -fx-border-radius: 30px;
+}
+.marcarConsulta{
+    -fx-background-color:linear-gradient(to bottom,#0c701e, #235d72);
+}
 
-
+.verConsultas {
+    -fx-background-color:linear-gradient(to bottom, #0c701e, #11b312);
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+    -fx-cursor:hand;
+    -fx-border-radius: 30px;
+}
+.verConsultas{
+    -fx-background-color:linear-gradient(to bottom,#0c701e, #11b312);
+}
 

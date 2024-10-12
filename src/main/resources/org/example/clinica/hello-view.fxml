@@ -11,33 +11,39 @@
 <?import javafx.scene.image.ImageView?>
 
 
-<StackPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900" prefWidth="700" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.clinica.HelloController">
+<StackPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500" prefWidth="700" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.clinica.controller.LoginPacienteController">
     <children>
-        <AnchorPane fx:id="main_form" prefHeight="800" prefWidth="600">
+        <AnchorPane fx:id="main_form" prefHeight="500" prefWidth="700">
             <children>
                 <AnchorPane prefHeight="500" prefWidth="400" styleClass="left-form" stylesheets="@style.css">
                     <ImageView layoutX="48.0" layoutY="56">
-                    <image>
-                        <Image url = "@images/medical.png">
-                        </Image>
-                    </image>
-                </ImageView>
+                        <image>
+                            <Image url = "@images/doctor.png">
+                            </Image>
+                        </image>
+                    </ImageView>
                     <children>
-                        <Label layoutX="60.0" layoutY="300.0" text="Consultório médico" textFill="WHITE">
+                        <Label layoutX="40.0" layoutY="300.0" text="Consultório médico" textFill="WHITE">
                             <font>
-                                <Font name="Arial" size="20.0" />
+                                <Font name="Arial" size="27.0"  />
                             </font>
                         </Label>
-                        <Label layoutX="85.0" layoutY="320.0" text="TEIC GRA" textFill="WHITE">
+                        <Label layoutX="70.0" layoutY="320.0" text="TEIC GRA" textFill="WHITE">
                             <font>
-                                <Font name="Arial" size="25.0" />
+                                <Font name="Arial" size="40.0" />
                             </font>
                         </Label>
                     </children>
                 </AnchorPane>
                 <AnchorPane layoutX="325.0" prefHeight="500" prefWidth="400" styleClass="right-form"
                             stylesheets="@style.css">
-                    <Label layoutX="113.0" layoutY="122.0" text="Login" textFill="#153293">
+                    <ImageView layoutX="119.0" layoutY="36" fitWidth="80" fitHeight="80">
+                        <image>
+                            <Image url = "@images/medical.png">
+                            </Image>
+                        </image>
+                    </ImageView>
+                    <Label layoutX="35.0" layoutY="110.0" text="Login do paciente" textFill="#153293">
                         <font>
                             <Font name="Arial Bold" size="30.0"/>
                         </font>

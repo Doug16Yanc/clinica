@@ -4,7 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class InitialController {
+public class LoginPacienteController {
     @FXML
     private Label welcomeText;
 
@@ -13,9 +13,9 @@ public class InitialController {
         welcomeText.setText("Welcome to JavaFX Application!");
     }
 
-    public void pacienteBtn(ActionEvent actionEvent) {
+    public void login(ActionEvent actionEvent) {
     }
 
-    public void medicoBtn(ActionEvent actionEvent) {
+    public void close(ActionEvent actionEvent) {
     }
 }
