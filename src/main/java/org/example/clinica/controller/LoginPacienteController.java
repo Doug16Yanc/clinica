@@ -1,4 +1,4 @@
-package org.example.clinica;
+package org.example.clinica.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
