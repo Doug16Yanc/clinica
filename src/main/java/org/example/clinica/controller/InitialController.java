@@ -7,9 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.stage.Stage;
-import org.example.clinica.application.LoginPacienteApplication;
 
 import java.io.IOException;
 import java.util.Objects;
@@ -19,39 +17,28 @@ public class InitialController {
     public Button pacienteBtn;
     @FXML
     public Button medicoBtn;
-    @FXML
-    private Label welcomeText;
-
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
 
     @FXML
     public void pacienteBtn(ActionEvent actionEvent) {
-
         try {
-            Parent root = FXMLLoader.load(LoginPacienteApplication.class.getResource("hello-view.fxml"));
-            Stage stageAtual = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-            stageAtual.close();
-
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/org/example/clinica/paciente-login.fxml")));
             Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.show();
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Erro ao abrir o stage: " + e.getMessage());
         }
     }
 
     @FXML
     public void medicoBtn(ActionEvent actionEvent) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/com/example/loginMedico.fxml"));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/org/example/clinica/medico-register.fxml")));
             Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.show();
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Erro ao abrir o stage: " + e.getMessage());
         }
     }
 }
