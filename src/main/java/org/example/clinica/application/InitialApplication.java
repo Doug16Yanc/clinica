@@ -1,4 +1,4 @@
-package org.example.clinica;
+package org.example.clinica.application;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -7,13 +7,17 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class LoginMedicoApplication extends Application {
+public class InitialApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(LoginPacienteApplication.class.getResource("login-medico.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(InitialApplication.class.getResource("/org/example/clinica/initial-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 900, 600);
         stage.setTitle("Teic Gra Medicina");
         stage.setScene(scene);
         stage.show();
+    }
+
+    public static void main(String[] args) {
+        launch();
     }
 }

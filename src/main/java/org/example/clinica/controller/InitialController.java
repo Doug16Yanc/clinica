@@ -1,4 +1,4 @@
-package org.example.clinica;
+package org.example.clinica.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import org.example.clinica.application.LoginPacienteApplication;
 
 import java.io.IOException;
 
@@ -29,7 +30,7 @@ public class InitialController {
     public void pacienteBtn(ActionEvent actionEvent) {
 
         try {
-            Parent root = FXMLLoader.load(LoginPacienteApplication.class.getResource("login-paciente.fxml"));
+            Parent root = FXMLLoader.load(LoginPacienteApplication.class.getResource("/org/example/clinica/login-paciente.fxml"));
             Stage stageAtual = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             stageAtual.close();
 
@@ -44,7 +45,7 @@ public class InitialController {
     @FXML
     public void medicoBtn(ActionEvent actionEvent) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("login-medico.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/org/example/clinica/login-medico.fxml"));
             Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.show();

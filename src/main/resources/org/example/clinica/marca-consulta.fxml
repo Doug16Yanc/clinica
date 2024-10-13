@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600" prefWidth="900" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.clinica.controller.MarcaConsultaController">
+    <children>
+        <AnchorPane fx:id="main_form" prefHeight="800" prefWidth="600">
+            <children>
+                <AnchorPane prefHeight="606.0" prefWidth="430.0" styleClass="left-form" stylesheets="@style/style.css">
+                    <ImageView layoutX="76.0" layoutY="140.0">
+                        <image>
+                            <Image url="@images/doctor.png">
+                            </Image>
+                        </image>
+                    </ImageView>
+                    <children>
+                        <Label layoutX="80.0" layoutY="390.0" text="Consultório médico" textFill="WHITE">
+                            <font>
+                                <Font name="Arial" size="27.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="100.0" layoutY="420.0" text="TEIC GRA" textFill="WHITE">
+                            <font>
+                                <Font name="Arial" size="50.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="430.0" prefHeight="606.0" prefWidth="478.0" styleClass="right-form" stylesheets="@style/style.css">
+
+                        <Label layoutX="89.0" layoutY="154.0" text="Selecione o médico:" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                            <font>
+                                <Font name="Arial" size="20.0" />
+                            </font>
+                        </Label>
+                        <ComboBox fx:id="medicoComboBox" layoutX="89.0" layoutY="193.0" prefWidth="300" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+
+                        <Label layoutX="95.0" layoutY="262.0" text="Motivo da consulta:" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                            <font>
+                                <Font name="Arial" size="20.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="motivoField" layoutX="89.0" layoutY="300" prefWidth="300" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+
+                        <HBox alignment="center" spacing="20" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                    <Button fx:id="marcarConsulta" layoutX="129.0" layoutY="360.0" mnemonicParsing="false" onAction="#marcarConsulta" prefHeight="40.0" prefWidth="220.0" styleClass="marcarConsulta" stylesheets="@style/style.css" text="Marcar consulta" />
+                    <Button fx:id="sairBtn" layoutX="129.0" layoutY="422.0" mnemonicParsing="false" onAction="#sair" prefHeight="40.0" prefWidth="220.0" styleClass="sair-btn" stylesheets="@style/style.css" text="Sair" />
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

@@ -1,4 +1,4 @@
-package org.example.clinica;
+package org.example.clinica.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,6 +10,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import org.example.clinica.application.LoginPacienteApplication;
 
 import java.io.IOException;
 import java.util.Objects;
@@ -26,7 +27,21 @@ public class LoginPacienteController {
     @FXML
     public Button btnSair;
 
-    public void login(ActionEvent actionEvent) {
+    public static void login(ActionEvent actionEvent) {
+        try {
+            Parent root = FXMLLoader.load(LoginPacienteApplication.class.getResource("/org/example/clinica/paciente-page.fxml"));
+            Stage stageAtual = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            stageAtual.close();
+
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void entrar(ActionEvent actionEvent) {
         String email = emailField.getText();
         String senha = senhaField.getText();
 
@@ -34,7 +49,7 @@ public class LoginPacienteController {
             showAlert("Erro", "Todos os campos devem ser preenchidos.", Alert.AlertType.ERROR);
         } else {
             showAlert("Sucesso", "Login realizado com sucesso!", Alert.AlertType.INFORMATION);
-
+            login(actionEvent);
         }
     }
 
@@ -48,7 +63,7 @@ public class LoginPacienteController {
 
     public void irRegistrar(ActionEvent actionEvent) {
         try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("registration-paciente.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/org/example/clinica/registration-paciente.fxml")));
             Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.show();
@@ -58,7 +73,7 @@ public class LoginPacienteController {
     }
 
     public void exit(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("initial-view.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/org/example/clinica/initial-view.fxml")));
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
         stage.show();

@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<StackPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600" prefWidth="900" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.clinica.controller.InitialController">
+<StackPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600" prefWidth="900" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.clinica.controller.VerConsultaController">
     <children>
         <AnchorPane fx:id="main_form" prefHeight="800" prefWidth="600">
             <children>
@@ -29,14 +29,8 @@
                         </Label>
                     </children>
                 </AnchorPane>
-                <AnchorPane layoutX="428.0" prefHeight="606.0" prefWidth="474.0" styleClass="right-form" stylesheets="@style/style.css">
-                    <Label layoutX="121.0" layoutY="273.0" text="Quem é você?" textFill="#153293">
-                        <font>
-                            <Font name="Arial Bold" size="30.0" />
-                        </font>
-                    </Label>
-                    <Button fx:id="medicoBtn" layoutX="119.0" layoutY="334.0" mnemonicParsing="false" onAction="#medicoBtn" prefHeight="40.0" prefWidth="220.0" styleClass="medicoBtn" stylesheets="@style/style.css" text="Sou médico" />
-                    <Button fx:id="pacienteBtn" layoutX="119.0" layoutY="392.0" mnemonicParsing="false" onAction="#pacienteBtn" prefHeight="40.0" prefWidth="220.0" styleClass="pacienteBtn" stylesheets="@style/style.css" text="Sou paciente" />
+                <AnchorPane layoutX="427.0" prefHeight="606.0" prefWidth="481.0" styleClass="right-form" stylesheets="@style/style.css">
+                    <Button fx:id="sairBtn" layoutX="128.0" layoutY="447.0" mnemonicParsing="false" onAction="#sair" prefHeight="40.0" prefWidth="220.0" styleClass="sair-btn" stylesheets="@style/style.css" text="Sair" />
                 </AnchorPane>
             </children>
         </AnchorPane>

@@ -5,11 +5,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<StackPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600" prefWidth="900" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.clinica.LoginMedicoController">
+<StackPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600" prefWidth="900" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.clinica.controller.LoginMedicoController">
     <children>
         <AnchorPane fx:id="main_form" prefHeight="600" prefWidth="800">
             <children>
-                <AnchorPane prefHeight="600.0" prefWidth="394.0" styleClass="left-form" stylesheets="@style.css">
+                <AnchorPane prefHeight="600.0" prefWidth="400.0" styleClass="left-form" stylesheets="@style/style.css">
                     <Label layoutX="91.0" layoutY="91.0" text="Boas-vindas" textFill="WHITE">
                         <font>
                             <Font name="Arial" size="27.0" />
@@ -34,7 +34,7 @@
                         </Label>
                     </children>
                 </AnchorPane>
-                <AnchorPane layoutX="382.0" prefHeight="600.0" prefWidth="526.0" styleClass="right-form" stylesheets="@style.css">
+                <AnchorPane layoutX="401.0" prefHeight="600.0" prefWidth="507.0" styleClass="right-form" stylesheets="@style/style.css">
                     <ImageView fitHeight="80" fitWidth="80" layoutX="210.0" layoutY="143.0">
                         <image>
                             <Image url="@images/medical.png">
@@ -46,10 +46,10 @@
                             <Font name="Arial Bold" size="30.0" />
                         </font>
                     </Label>
-                    <TextField fx:id="username" layoutX="159.0" layoutY="300.0" prefHeight="30.0" prefWidth="220.0" promptText="Usuário" styleClass="textfield" stylesheets="@style.css" />
-                    <PasswordField fx:id="password" layoutX="159.0" layoutY="344.0" prefHeight="30.0" prefWidth="220.0" promptText="Senha" styleClass="textfield" stylesheets="@style.css" />
-                    <Button fx:id="loginBtn" layoutX="153.0" layoutY="392.0" mnemonicParsing="false" onAction="#login" prefHeight="40.0" prefWidth="220.0" styleClass="loginBtn" stylesheets="@style.css" text="Entrar" />
-                    <Button fx:id="btnSair" layoutX="153.0" layoutY="445.0" mnemonicParsing="false" onAction="#exit" prefHeight="40.0" prefWidth="220.0" styleClass="cancel-btn" stylesheets="@style.css" text="Sair" />
+                    <TextField fx:id="crm" layoutX="159.0" layoutY="300.0" prefHeight="30.0" prefWidth="220.0" promptText="CRM" styleClass="textfield" stylesheets="@style/style.css" />
+                    <PasswordField fx:id="senha" layoutX="159.0" layoutY="344.0" prefHeight="30.0" prefWidth="220.0" promptText="Senha" styleClass="textfield" stylesheets="@style/style.css" />
+                    <Button fx:id="entrar" layoutX="153.0" layoutY="392.0" mnemonicParsing="false" onAction="#entrar" prefHeight="40.0" prefWidth="220.0" styleClass="loginBtn" stylesheets="@style/style.css" text="Entrar" />
+                    <Button fx:id="sair" layoutX="153.0" layoutY="445.0" mnemonicParsing="false" onAction="#sair" prefHeight="40.0" prefWidth="220.0" styleClass="cancel-btn" stylesheets="@style/style.css" text="Sair" />
                 </AnchorPane>
             </children>
         </AnchorPane>

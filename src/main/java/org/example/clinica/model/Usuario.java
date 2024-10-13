@@ -1,6 +1,6 @@
 package org.example.clinica.model;
 
-public class Usuario {
+abstract class Usuario {
     private int id;
     private String nome;
     private String email;
@@ -13,6 +13,9 @@ public class Usuario {
         this.email = email;
         this.senha = senha;
         this.telefone = telefone;
+    }
+
+    Usuario() {
     }
 
     public int getId() {

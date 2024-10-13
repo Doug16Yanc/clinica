@@ -5,11 +5,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<StackPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600" prefWidth="900" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.clinica.PacientePageController">
+<StackPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600" prefWidth="900" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.clinica.controller.PacientePageController">
     <children>
         <AnchorPane fx:id="main_form" prefHeight="500" prefWidth="700">
             <children>
-                <AnchorPane prefHeight="600.0" prefWidth="410.0" styleClass="left-form" stylesheets="@style.css">
+                <AnchorPane prefHeight="600.0" prefWidth="410.0" styleClass="left-form" stylesheets="@style/style.css">
                     <Label layoutX="111.0" layoutY="65.0" text="Boas-vindas" textFill="WHITE">
                         <font>
                             <Font name="Arial" size="27.0" />
@@ -35,7 +35,7 @@
 
                     </children>
                 </AnchorPane>
-                <AnchorPane layoutX="403.0" prefHeight="600.0" prefWidth="498.0" styleClass="right-form" stylesheets="@style.css">
+                <AnchorPane layoutX="403.0" prefHeight="600.0" prefWidth="498.0" styleClass="right-form" stylesheets="@style/style.css">
                     <ImageView fitHeight="80" fitWidth="80" layoutX="189.0" layoutY="123.0">
                         <image>
                             <Image url="@images/medical.png">
@@ -47,9 +47,9 @@
                             <Font name="Arial Bold" size="30.0" />
                         </font>
                     </Label>
-                    <Button fx:id="marcarConsulta" layoutX="125.0" layoutY="280.0" mnemonicParsing="false" onAction="#marcarConsulta" prefHeight="40.0" prefWidth="220.0" styleClass="marcarConsulta" stylesheets="@style.css" text="Marcar consulta" />
-                    <Button fx:id="verConsultas" layoutX="125.0" layoutY="331.0" mnemonicParsing="false" onAction="#verConsultas" prefHeight="40.0" prefWidth="220.0" styleClass="verConsultas" stylesheets="@style.css" text="Ver consultas" />
-                    <Button fx:id="sairBtn" layoutX="125.0" layoutY="392.0" mnemonicParsing="false" onAction="#sair" prefHeight="40.0" prefWidth="220.0" styleClass="sair-btn" stylesheets="@style.css" text="Sair" />
+                    <Button fx:id="marcarConsulta" layoutX="125.0" layoutY="280.0" mnemonicParsing="false" onAction="#marcarConsulta" prefHeight="40.0" prefWidth="220.0" styleClass="marcarConsulta" stylesheets="@style/style.css" text="Marcar consulta" />
+                    <Button fx:id="verConsultas" layoutX="125.0" layoutY="331.0" mnemonicParsing="false" onAction="#verConsultas" prefHeight="40.0" prefWidth="220.0" styleClass="verConsultas" stylesheets="@style/style.css" text="Ver consultas" />
+                    <Button fx:id="sairBtn" layoutX="125.0" layoutY="392.0" mnemonicParsing="false" onAction="#sair" prefHeight="40.0" prefWidth="220.0" styleClass="sair-btn" stylesheets="@style/style.css" text="Sair" />
                 </AnchorPane>
             </children>
         </AnchorPane>

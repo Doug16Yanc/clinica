@@ -5,11 +5,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<StackPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600" prefWidth="900" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.clinica.LoginPacienteController">
+<StackPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600" prefWidth="900" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.clinica.controller.LoginPacienteController">
     <children>
         <AnchorPane fx:id="main_form" prefHeight="600" prefWidth="800">
             <children>
-                <AnchorPane layoutX="61.0" prefHeight="608.0" prefWidth="453.0" styleClass="left-form" stylesheets="@style.css">
+                <AnchorPane layoutX="61.0" prefHeight="608.0" prefWidth="416.0" styleClass="left-form" stylesheets="@style/style.css">
                     <Label layoutX="91.0" layoutY="91.0" text="Boas-vindas" textFill="WHITE">
                         <font>
                             <Font name="Arial" size="27.0" />
@@ -34,7 +34,7 @@
                         </Label>
                     </children>
                 </AnchorPane>
-                <AnchorPane layoutX="448.0" prefHeight="608.0" prefWidth="579.0" styleClass="right-form" stylesheets="@style.css">
+                <AnchorPane layoutX="467.0" prefHeight="608.0" prefWidth="560.0" styleClass="right-form" stylesheets="@style/style.css">
                     <ImageView fitHeight="80" fitWidth="80" layoutX="226.0" layoutY="84.0">
                         <image>
                             <Image url="@images/medical.png">
@@ -46,11 +46,11 @@
                             <Font name="Arial Bold" size="30.0" />
                         </font>
                     </Label>
-                    <TextField fx:id="username" layoutX="163.0" layoutY="256.0" prefHeight="30.0" prefWidth="220.0" promptText="Usuário" styleClass="textfield" stylesheets="@style.css" />
-                    <PasswordField fx:id="password" layoutX="163.0" layoutY="304.0" prefHeight="30.0" prefWidth="220.0" promptText="Senha" styleClass="textfield" stylesheets="@style.css" />
-                    <Button fx:id="loginBtn" layoutX="163.0" layoutY="355.0" mnemonicParsing="false" onAction="#login" prefHeight="40.0" prefWidth="220.0" styleClass="loginBtn" stylesheets="@style.css" text="Entrar" />
-                    <Button fx:id="btnIrRegistrar" layoutX="163.0" layoutY="414.0" mnemonicParsing="false" onAction="#irRegistrar" prefHeight="40.0" prefWidth="220.0" styleClass="register-btn" stylesheets="@style.css" text="Registrar" />
-                    <Button fx:id="btnSair" layoutX="163.0" layoutY="474.0" mnemonicParsing="false" onAction="#exit" prefHeight="40.0" prefWidth="220.0" styleClass="cancel-btn" stylesheets="@style.css" text="Sair" />
+                    <TextField fx:id="emailField" layoutX="163.0" layoutY="256.0" prefHeight="30.0" prefWidth="220.0" promptText="Usuário" styleClass="textfield" stylesheets="@style/style.css" />
+                    <PasswordField fx:id="senhaField" layoutX="163.0" layoutY="304.0" prefHeight="30.0" prefWidth="220.0" promptText="Senha" styleClass="textfield" stylesheets="@style/style.css" />
+                    <Button fx:id="loginBtn" layoutX="163.0" layoutY="355.0" mnemonicParsing="false" onAction="#entrar" prefHeight="40.0" prefWidth="220.0" styleClass="loginBtn" stylesheets="@style/style.css" text="Entrar" />
+                    <Button fx:id="btnIrRegistrar" layoutX="163.0" layoutY="414.0" mnemonicParsing="false" onAction="#irRegistrar" prefHeight="40.0" prefWidth="220.0" styleClass="register-btn" stylesheets="@style/style.css" text="Registrar" />
+                    <Button fx:id="btnSair" layoutX="163.0" layoutY="474.0" mnemonicParsing="false" onAction="#exit" prefHeight="40.0" prefWidth="220.0" styleClass="cancel-btn" stylesheets="@style/style.css" text="Sair" />
                 </AnchorPane>
             </children>
         </AnchorPane>
