@@ -29,4 +29,7 @@ public class LoginMedicoController {
     @FXML
     public void close(ActionEvent actionEvent) {
     }
+
+    public void exit(ActionEvent actionEvent) {
+    }
 }

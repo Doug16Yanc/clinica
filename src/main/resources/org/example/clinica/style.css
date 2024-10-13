@@ -50,7 +50,7 @@ and open the template in the editor.
     -fx-background-radius: 16px;
 }
 .loginBtn:hover{
-    -fx-background-color:linear-gradient(to bottom,#1FE8DC, #235d72);
+    -fx-background-color:linear-gradient(to bottom,#1FE8DC, #061919);
 }
 
 .medicoBtn{
@@ -62,7 +62,7 @@ and open the template in the editor.
     -fx-background-radius: 16px;
 }
 .medicoBtn:hover{
-    -fx-background-color:linear-gradient(to bottom,#1FE8DC, #235d72);
+    -fx-background-color:linear-gradient(to bottom,#1FE8DC, #061919);
 }
 
 .pacienteBtn{
@@ -73,8 +73,8 @@ and open the template in the editor.
     -fx-cursor:hand;
     -fx-background-radius: 16px ;
 }
-.pacienteBtn{
-    -fx-background-color:linear-gradient(to bottom,#1FE8DC, #235d72);
+.pacienteBtn:hover{
+    -fx-background-color:linear-gradient(to bottom,#1FE8DC, #061919);
 }
 
 .marcarConsulta{
@@ -85,8 +85,8 @@ and open the template in the editor.
     -fx-cursor:hand;
     -fx-background-radius: 16px ;
 }
-.marcarConsulta{
-    -fx-background-color:linear-gradient(to bottom,#1FE8DC, #235d72);
+.marcarConsulta :hover{
+    -fx-background-color:linear-gradient(to bottom,#1FE8DC, #061919);
 }
 
 .verConsultas{
@@ -97,8 +97,8 @@ and open the template in the editor.
     -fx-cursor:hand;
     -fx-background-radius: 16px ;
 }
-.verConsultas{
-    -fx-background-color:linear-gradient(to bottom,#1FE8DC, #235d72);
+.verConsultas:hover{
+    -fx-background-color:linear-gradient(to bottom,#1FE8DC, #061919);
 }
 
 .realizarConsulta{
@@ -109,8 +109,8 @@ and open the template in the editor.
     -fx-cursor:hand;
     -fx-background-radius: 16px ;
 }
-.realizarConsulta{
-    -fx-background-color:linear-gradient(to bottom,#1FE8DC, #235d72);
+.realizarConsulta:hover{
+    -fx-background-color:linear-gradient(to bottom,#1FE8DC, #061919);
 }
 
 .verHistorico{
@@ -122,8 +122,45 @@ and open the template in the editor.
     -fx-background-radius: 16px ;
 }
 .verHistorico{
-    -fx-background-color:linear-gradient(to bottom,#1FE8DC, #235d72);
+    -fx-background-color:linear-gradient(to bottom,#1FE8DC, #061919);
 }
 
+.register-btn{
+    -fx-background-color:linear-gradient(to bottom, #1FE8DC, #235d72);
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+    -fx-cursor: hand;
+    -fx-background-radius : 16px;
+}
 
+.register-btn:hover {
+    -fx-background-color: linear-gradient(to bottom, #1FE8DC, #061919);
+}
+
+.cancel-btn{
+    -fx-background-color:linear-gradient(to bottom, #ea0f21, #7e0e16);
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+    -fx-cursor: hand;
+    -fx-background-radius : 16px;
+}
+
+.cancel-btn:hover {
+    -fx-background-color: linear-gradient(to bottom, #ea0f21, #320204);
+}
+
+.sair-btn{
+     -fx-background-color:linear-gradient(to bottom, #ea0f21, #7e0e16);
+     -fx-text-fill: #fff;
+     -fx-font-size: 14px;
+     -fx-font-family: Arial;
+     -fx-cursor: hand;
+     -fx-background-radius : 16px;
+ }
+
+.sair-btn:hover {
+    -fx-background-color: linear-gradient(to bottom, #ea0f21, #320204);
+}
 

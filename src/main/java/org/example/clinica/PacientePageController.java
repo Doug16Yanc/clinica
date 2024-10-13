@@ -11,4 +11,7 @@ public class PacientePageController {
     @FXML
     public void verConsultas(ActionEvent actionEvent) {
     }
+
+    public void sair(ActionEvent actionEvent) {
+    }
 }
