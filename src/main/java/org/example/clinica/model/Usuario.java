@@ -7,8 +7,8 @@ abstract class Usuario {
     private String senha;
     private String telefone;
 
-    public Usuario(int id, String nome, String email, String senha, String telefone) {
-        this.id = id;
+    public Usuario(String nome, String email, String senha, String telefone) {
+
         this.nome = nome;
         this.email = email;
         this.senha = senha;

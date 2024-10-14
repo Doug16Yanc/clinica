@@ -5,8 +5,8 @@ public class Paciente extends Usuario {
 
     public Paciente(){}
 
-    public Paciente(int id, String nome, String email, String senha, String telefone, String CPF) {
-        super(id, nome, email, senha, telefone);
+    public Paciente(String nome, String email, String telefone, String senha, String CPF) {
+        super(nome, email, telefone, senha);
         this.CPF = CPF;
     }
 

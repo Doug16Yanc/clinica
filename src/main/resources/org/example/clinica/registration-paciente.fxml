@@ -31,11 +31,11 @@
                          <Label layoutX="53.0" layoutY="222.0" text="Email" />
                         <TextField fx:id="emailField" layoutX="50.0" layoutY="238.0" prefHeight="40.0" prefWidth="400.0" />
 
-                        <Label layoutX="51.0" layoutY="278.0" text="Senha" />
-                        <PasswordField fx:id="senhaField" layoutX="50.0" layoutY="300.0" prefHeight="40.0" prefWidth="400.0" />
+                        <Label layoutX="54.0" layoutY="278.0" text="Telefone" />
+                        <TextField fx:id="telefoneField" layoutX="50.0" layoutY="300.0" prefHeight="40.0" prefWidth="400.0" />
 
-                        <Label layoutX="43.0" layoutY="342.0" text="Telefone" />
-                        <TextField fx:id="telefoneField" layoutX="50.0" layoutY="366.0" prefHeight="40.0" prefWidth="400.0" />
+                        <Label layoutX="51.0" layoutY="342.0" text="Senha" />
+                        <PasswordField fx:id="senhaField" layoutX="50.0" layoutY="368.0" prefHeight="40.0" prefWidth="400.0" />
 
                         <Label layoutX="51.0" layoutY="417.0" text="CPF" />
                         <TextField fx:id="cpfField" layoutX="50.0" layoutY="433.0" prefHeight="40.0" prefWidth="400.0" />
@@ -47,17 +47,17 @@
                 </AnchorPane>
                 <AnchorPane layoutY="2.0" prefHeight="600.0" prefWidth="400" styleClass="left-form">
                     <children>
-                        <ImageView layoutX="48.0" layoutY="56">
+                        <ImageView layoutX="26.0" layoutY="77.0">
                             <image>
-                                <Image url="@images/doctor.png" />
+                                <Image url="@images/login.png" />
                             </image>
                         </ImageView>
-                        <Label layoutX="40.0" layoutY="300.0" text="Consultório médico" textFill="WHITE">
+                        <Label layoutX="70.0" layoutY="440.0" text="Consultório médico" textFill="WHITE">
                             <font>
                                 <Font name="Arial" size="27.0" />
                             </font>
                         </Label>
-                        <Label layoutX="70.0" layoutY="320.0" text="TEIC GRA" textFill="WHITE">
+                        <Label layoutX="100.0" layoutY="470.0" text="TEIC GRA" textFill="WHITE">
                             <font>
                                 <Font name="Arial" size="40.0" />
                             </font>

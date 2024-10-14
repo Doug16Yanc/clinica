@@ -10,19 +10,19 @@
         <AnchorPane fx:id="main_form" prefHeight="800" prefWidth="600">
             <children>
                 <AnchorPane prefHeight="606.0" prefWidth="430.0" styleClass="left-form" stylesheets="@style/style.css">
-                    <ImageView layoutX="76.0" layoutY="140.0">
+                    <ImageView layoutX="26.0" layoutY="77.0"  fitWidth="400" fitHeight="350">
                         <image>
-                            <Image url="@images/doctor.png">
+                            <Image url="@images/login.png">
                             </Image>
                         </image>
                     </ImageView>
                     <children>
-                        <Label layoutX="80.0" layoutY="390.0" text="Consultório médico" textFill="WHITE">
+                        <Label layoutX="70.0" layoutY="440.0" text="Consultório médico" textFill="WHITE">
                             <font>
                                 <Font name="Arial" size="27.0" />
                             </font>
                         </Label>
-                        <Label layoutX="100.0" layoutY="420.0" text="TEIC GRA" textFill="WHITE">
+                        <Label layoutX="100.0" layoutY="470.0" text="TEIC GRA" textFill="WHITE">
                             <font>
                                 <Font name="Arial" size="50.0" />
                             </font>
@@ -46,7 +46,7 @@
                         <TextField fx:id="motivoField" layoutX="89.0" layoutY="300" prefWidth="300" GridPane.columnIndex="3" GridPane.rowIndex="3" />
 
                         <HBox alignment="center" spacing="20" GridPane.columnIndex="0" GridPane.rowIndex="4" />
-                    <Button fx:id="marcarConsulta" layoutX="129.0" layoutY="360.0" mnemonicParsing="false" onAction="#marcarConsulta" prefHeight="40.0" prefWidth="220.0" styleClass="marcarConsulta" stylesheets="@style/style.css" text="Marcar consulta" />
+                    <Button fx:id="marcarConsulta" layoutX="129.0" layoutY="360.0" mnemonicParsing="false" onAction="#agendarConsulta" prefHeight="40.0" prefWidth="220.0" styleClass="marcarConsulta" stylesheets="@style/style.css" text="Marcar consulta" />
                     <Button fx:id="sairBtn" layoutX="129.0" layoutY="422.0" mnemonicParsing="false" onAction="#sair" prefHeight="40.0" prefWidth="220.0" styleClass="sair-btn" stylesheets="@style/style.css" text="Sair" />
                 </AnchorPane>
             </children>

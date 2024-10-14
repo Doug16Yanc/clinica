@@ -71,7 +71,7 @@ public class PacienteRepository {
                 paciente.setEmail(rs.getString("email"));
                 paciente.setTelefone(rs.getString("telefone"));
                 paciente.setSenha(rs.getString("senha"));
-                paciente.setCPF(rs.getString("cpf"));
+                paciente.setCPF(rs.getString("codigo"));
                 return paciente;
             } else {
                 return null;

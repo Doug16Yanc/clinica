@@ -10,24 +10,19 @@
         <AnchorPane fx:id="main_form" prefHeight="600" prefWidth="800">
             <children>
                 <AnchorPane prefHeight="600.0" prefWidth="400.0" styleClass="left-form" stylesheets="@style/style.css">
-                    <Label layoutX="91.0" layoutY="91.0" text="Boas-vindas" textFill="WHITE">
-                        <font>
-                            <Font name="Arial" size="27.0" />
-                        </font>
-                    </Label>
-                    <ImageView layoutX="77.0" layoutY="141.0">
+                    <ImageView layoutX="26.0" layoutY="77.0">
                         <image>
-                            <Image url="@images/doctor.png">
+                            <Image url="@images/login.png">
                             </Image>
                         </image>
                     </ImageView>
                     <children>
-                        <Label layoutX="60.0" layoutY="390.0" text="Consultório médico" textFill="WHITE">
+                        <Label layoutX="70.0" layoutY="440.0" text="Consultório médico" textFill="WHITE">
                             <font>
                                 <Font name="Arial" size="27.0" />
                             </font>
                         </Label>
-                        <Label layoutX="80.0" layoutY="420.0" text="TEIC GRA" textFill="WHITE">
+                        <Label layoutX="100.0" layoutY="470.0" text="TEIC GRA" textFill="WHITE">
                             <font>
                                 <Font name="Arial" size="40.0" />
                             </font>
@@ -48,7 +43,7 @@
                     </Label>
                     <TextField fx:id="crm" layoutX="159.0" layoutY="300.0" prefHeight="30.0" prefWidth="220.0" promptText="CRM" styleClass="textfield" stylesheets="@style/style.css" />
                     <PasswordField fx:id="senha" layoutX="159.0" layoutY="344.0" prefHeight="30.0" prefWidth="220.0" promptText="Senha" styleClass="textfield" stylesheets="@style/style.css" />
-                    <Button fx:id="entrar" layoutX="153.0" layoutY="392.0" mnemonicParsing="false" onAction="#entrar" prefHeight="40.0" prefWidth="220.0" styleClass="loginBtn" stylesheets="@style/style.css" text="Entrar" />
+                    <Button fx:id="entrar" layoutX="153.0" layoutY="392.0" mnemonicParsing="false" onAction="#login" prefHeight="40.0" prefWidth="220.0" styleClass="loginBtn" stylesheets="@style/style.css" text="Entrar" />
                     <Button fx:id="sair" layoutX="153.0" layoutY="445.0" mnemonicParsing="false" onAction="#sair" prefHeight="40.0" prefWidth="220.0" styleClass="cancel-btn" stylesheets="@style/style.css" text="Sair" />
                 </AnchorPane>
             </children>

@@ -10,29 +10,71 @@
         <AnchorPane fx:id="main_form" prefHeight="800" prefWidth="600">
             <children>
                 <AnchorPane prefHeight="606.0" prefWidth="430.0" styleClass="left-form" stylesheets="@style/style.css">
-                    <ImageView layoutX="76.0" layoutY="140.0">
+                    <ImageView layoutX="26.0" layoutY="77.0" >
                         <image>
-                            <Image url="@images/doctor.png">
+                            <Image url="@images/login.png">
                             </Image>
                         </image>
                     </ImageView>
                     <children>
-                        <Label layoutX="60.0" layoutY="390.0" text="Consultório médico" textFill="WHITE">
+                        <Label layoutX="70.0" layoutY="440.0" text="Consultório médico" textFill="WHITE">
                             <font>
                                 <Font name="Arial" size="27.0" />
                             </font>
                         </Label>
-                        <Label layoutX="80.0" layoutY="420.0" text="TEIC GRA" textFill="WHITE">
+                        <Label layoutX="100.0" layoutY="470.0" text="TEIC GRA" textFill="WHITE">
                             <font>
-                                <Font name="Arial" size="40.0" />
+                                <Font name="Arial" size="50.0" />
                             </font>
                         </Label>
                     </children>
                 </AnchorPane>
-                <AnchorPane layoutX="427.0" prefHeight="606.0" prefWidth="481.0" styleClass="right-form" stylesheets="@style/style.css">
-                    <Button fx:id="sairBtn" layoutX="128.0" layoutY="447.0" mnemonicParsing="false" onAction="#sair" prefHeight="40.0" prefWidth="220.0" styleClass="sair-btn" stylesheets="@style/style.css" text="Sair" />
+                <AnchorPane layoutX="430.0" prefHeight="606.0" prefWidth="478.0" styleClass="right-form" stylesheets="@style/style.css">
+
+                    <Button fx:id="sairBtn" layoutX="129.0" layoutY="422.0" mnemonicParsing="false" onAction="#sair" prefHeight="40.0" prefWidth="220.0" styleClass="sair-btn" stylesheets="@style/style.css" text="Sair" />
                 </AnchorPane>
             </children>
         </AnchorPane>
     </children>
 </StackPane>
+
+
+        <!--xml version="1.0" encoding="UTF-8"?>
+
+        <?import javafx.scene.control.*?>
+        <?import javafx.scene.image.*?>
+        <?import javafx.scene.layout.*?>
+
+        <?import javafx.scene.text.Font?>
+        <StackPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600" prefWidth="900" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.clinica.controller.VerConsultaController">
+            <children>
+                <AnchorPane fx:id="main_form" prefHeight="800" prefWidth="600">
+                    <children>
+                        <AnchorPane prefHeight="606.0" prefWidth="430.0" styleClass="left-form" stylesheets="@style/style.css">
+                          <ImageView layoutX="113.0" layoutY="189.0">
+                                <image>
+                                    <Image url="@images/doctor.png">
+                                    </Image>
+                                </image>
+                            </ImageView>
+                            <children>
+                                <Label layoutX="88.0" layoutY="386.0" text="Consultório médico" textFill="WHITE">
+                                    <font>
+                                        <Font name="Arial" size="27.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="100.0" layoutY="420.0" text="TEIC GRA" textFill="WHITE">
+                                    <font>
+                                        <Font name="Arial" size="50.0" />
+                                    </font>
+                                </Label>
+                          <ImageView fitHeight="215.0" fitWidth="247.0" layoutX="95.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="427.0" prefHeight="606.0" prefWidth="481.0" styleClass="right-form" stylesheets="@style/style.css">
+                            <Button fx:id="sairBtn" layoutX="128.0" layoutY="447.0" mnemonicParsing="false" onAction="#sair" prefHeight="40.0" prefWidth="220.0" styleClass="sair-btn" stylesheets="@style/style.css" text="Sair" />
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+            </children>
+        </StackPane>-->

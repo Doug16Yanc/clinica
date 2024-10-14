@@ -12,8 +12,11 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import org.example.clinica.application.LoginMedicoApplication;
 import org.example.clinica.application.LoginPacienteApplication;
+import org.example.clinica.model.Medico;
+import org.example.clinica.repository.MedicoRepository;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Objects;
 
 public class LoginMedicoController {
@@ -26,33 +29,42 @@ public class LoginMedicoController {
     @FXML
     public Button sair;
     @FXML
+    private static final MedicoRepository medicoRepository = new MedicoRepository();
 
-    public static void login(ActionEvent actionEvent) {
+
+    public void login(ActionEvent actionEvent) {
+
         try {
-            Parent root = FXMLLoader.load(LoginPacienteApplication.class.getResource("/org/example/clinica/medico-page.fxml"));
-            Stage stageAtual = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-            stageAtual.close();
+            Medico medico = medicoRepository.buscarMedico(crm.getText(), senha.getText());
 
-            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(root));
-            stage.show();
+            if (medico != null) {
+
+                FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(LoginMedicoController.class.getResource("/org/example/clinica/medico-page.fxml")));
+                Parent root = loader.load();
+
+                MedicoPageController medicoPageController = loader.getController();
+                medicoPageController.setMedicoLogado(medico);
+
+                Stage stageAtual = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+                stageAtual.close();
+
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.show();
+
+                showAlert("Sucesso", "Seja bem-vindo(a) " + medico.getNome() + "!", Alert.AlertType.INFORMATION);
+
+            } else {
+                showAlert("Falha", "Credenciais inválidas!", Alert.AlertType.ERROR);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
 
 
-    public void entrar(ActionEvent actionEvent) {
-        String entry = crm.getText();
-        String pass = senha.getText();
-
-        if (entry.trim().isEmpty() || pass.trim().isEmpty()) {
-            showAlert("Erro", "Todos os campos devem ser preenchidos.", Alert.AlertType.ERROR);
-        } else {
-            showAlert("Sucesso", "Login realizado com sucesso!", Alert.AlertType.INFORMATION);
-            login(actionEvent);
-        }
-    }
 
     private void showAlert(String title, String message, Alert.AlertType alertType) {
         Alert alert = new Alert(alertType);

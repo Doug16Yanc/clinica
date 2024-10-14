@@ -53,4 +53,8 @@ public class InitialController {
             e.printStackTrace();
         }
     }
+
+    public void sair(ActionEvent actionEvent) {
+        System.exit(0);
+    }
 }

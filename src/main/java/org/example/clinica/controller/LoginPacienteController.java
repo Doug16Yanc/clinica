@@ -11,8 +11,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import org.example.clinica.application.LoginPacienteApplication;
+import org.example.clinica.model.Medico;
+import org.example.clinica.model.Paciente;
+import org.example.clinica.repository.PacienteRepository;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Objects;
 
 public class LoginPacienteController {
@@ -20,38 +24,47 @@ public class LoginPacienteController {
     public TextField emailField;
     @FXML
     public TextField senhaField;
-    @FXML
-    public Button btnPacientLogin;
+
     @FXML
     public Button btnIrRegistrar;
     @FXML
     public Button btnSair;
 
-    public static void login(ActionEvent actionEvent) {
+    private final PacienteRepository pacienteRepository = new PacienteRepository();
+
+    public void login(ActionEvent actionEvent) {
+
         try {
-            Parent root = FXMLLoader.load(LoginPacienteApplication.class.getResource("/org/example/clinica/paciente-page.fxml"));
-            Stage stageAtual = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-            stageAtual.close();
+            Paciente paciente = pacienteRepository.buscarPaciente(emailField.getText(), senhaField.getText());
 
-            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(root));
-            stage.show();
+            if (paciente != null) {
+
+                FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(LoginMedicoController.class.getResource("/org/example/clinica/paciente-page.fxml")));
+                Parent root = loader.load();
+
+
+                PacientePageController pacientePageController = loader.getController();
+                pacientePageController.setPacienteLogado(paciente);
+
+                Stage stageAtual = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+                stageAtual.close();
+
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.show();
+
+                showAlert("Sucesso", "Seja bem-vindo(a), caríssimo(a) " + paciente.getNome() + "!", Alert.AlertType.INFORMATION);
+
+            } else {
+                showAlert("Falha", "Credenciais inválidas!", Alert.AlertType.ERROR);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
 
-    public void entrar(ActionEvent actionEvent) {
-        String email = emailField.getText();
-        String senha = senhaField.getText();
-
-        if (email.trim().isEmpty() || senha.trim().isEmpty()) {
-            showAlert("Erro", "Todos os campos devem ser preenchidos.", Alert.AlertType.ERROR);
-        } else {
-            showAlert("Sucesso", "Login realizado com sucesso!", Alert.AlertType.INFORMATION);
-            login(actionEvent);
-        }
-    }
 
     private void showAlert(String title, String message, Alert.AlertType alertType) {
         Alert alert = new Alert(alertType);

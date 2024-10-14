@@ -17,7 +17,7 @@ public class Consulta {
 
     }
 
-    public Consulta(String motivo, Timestamp agora, Paciente paciente, Medico medico) {
+    public Consulta(String motivo, Timestamp agora, Paciente paciente, Medico medico, boolean status) {
         this.id = UUID.randomUUID();
         this.motivo = motivo;
         this.agora = agora;
@@ -25,6 +25,7 @@ public class Consulta {
         this.medico = medico;
         this.status = false;
     }
+
 
     public UUID getId() {
         return id;

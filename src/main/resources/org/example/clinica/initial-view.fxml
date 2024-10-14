@@ -10,19 +10,19 @@
         <AnchorPane fx:id="main_form" prefHeight="800" prefWidth="600">
             <children>
                 <AnchorPane prefHeight="606.0" prefWidth="430.0" styleClass="left-form" stylesheets="@style/style.css">
-                    <ImageView layoutX="76.0" layoutY="140.0">
+                    <ImageView layoutX="26.0" layoutY="77.0">
                         <image>
-                            <Image url="@images/doctor.png">
+                            <Image url="@images/login.png">
                             </Image>
                         </image>
                     </ImageView>
                     <children>
-                        <Label layoutX="60.0" layoutY="390.0" text="Consultório médico" textFill="WHITE">
+                        <Label layoutX="70.0" layoutY="440.0" text="Consultório médico" textFill="WHITE">
                             <font>
                                 <Font name="Arial" size="27.0" />
                             </font>
                         </Label>
-                        <Label layoutX="80.0" layoutY="420.0" text="TEIC GRA" textFill="WHITE">
+                        <Label layoutX="100.0" layoutY="470.0" text="TEIC GRA" textFill="WHITE">
                             <font>
                                 <Font name="Arial" size="40.0" />
                             </font>
@@ -37,6 +37,7 @@
                     </Label>
                     <Button fx:id="medicoBtn" layoutX="119.0" layoutY="334.0" mnemonicParsing="false" onAction="#medicoBtn" prefHeight="40.0" prefWidth="220.0" styleClass="medicoBtn" stylesheets="@style/style.css" text="Sou médico" />
                     <Button fx:id="pacienteBtn" layoutX="119.0" layoutY="392.0" mnemonicParsing="false" onAction="#pacienteBtn" prefHeight="40.0" prefWidth="220.0" styleClass="pacienteBtn" stylesheets="@style/style.css" text="Sou paciente" />
+                    <Button fx:id="sairBtn" layoutX="119.0" layoutY="450.0" mnemonicParsing="false" onAction="#sair" prefHeight="40.0" prefWidth="220.0" styleClass="sair-btn" stylesheets="@style/style.css" text="Sair" />
                 </AnchorPane>
             </children>
         </AnchorPane>
