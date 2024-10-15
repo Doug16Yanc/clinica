@@ -47,7 +47,7 @@ public class ComprovanteConsultaProof extends Stage {
     }
 
     private String gerarComprovante(Consulta consulta) {
-        return "\tCOMPROVANTE DE CONSULTA.\n\n" +
+        return "\t\t\tATENÇÃO, CARO(A) PACIENTE!.\n\n" +
                 "Código da consulta: " + consulta.getId() + "\n" +
                 "Data e hora marcada: " + consulta.getAgora() + "\n" +
                 "Identificador do(a) paciente: " + consulta.getPaciente().getId() + "\n" +
