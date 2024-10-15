@@ -13,4 +13,6 @@ module org.example.clinica {
     opens org.example.clinica.controller to javafx.fxml;
     exports org.example.clinica.application;
     opens org.example.clinica.application to javafx.fxml;
+    exports org.example.clinica.proofs;
+    opens org.example.clinica.proofs to javafx.fxml;
 }

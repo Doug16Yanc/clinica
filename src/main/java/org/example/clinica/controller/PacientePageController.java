@@ -22,18 +22,27 @@ public class PacientePageController {
 
     @FXML
     public void marcarConsulta(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/org/example/clinica/marca-consulta.fxml")));
-        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+
+        FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(LoginMedicoController.class.getResource("/org/example/clinica/marca-consulta.fxml")));
+        Parent root = loader.load();
+
+        MarcaConsultaController marcaConsultaController = loader.getController();
+        marcaConsultaController.setPacienteLogado(pacienteLogado);
+
+        Stage stageAtual = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stageAtual.close();
+
+        Stage stage = new Stage();
         stage.setScene(new Scene(root));
         stage.show();
+
     }
 
     @FXML
     public void verConsultas(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/org/example/clinica/ver-consulta.fxml")));
-        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
-        stage.show();
+
+       VerConsultaController verConsultaController = new VerConsultaController(pacienteLogado);
+       verConsultaController.setPacienteLogado(pacienteLogado);
     }
 
     @FXML

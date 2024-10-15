@@ -16,5 +16,4 @@ public class LoginPacienteApplication extends Application {
         stage.setScene(scene);
         stage.show();
     }
-
 }

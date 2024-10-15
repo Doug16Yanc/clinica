@@ -39,9 +39,8 @@ public class LoginPacienteController {
 
             if (paciente != null) {
 
-                FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(LoginMedicoController.class.getResource("/org/example/clinica/paciente-page.fxml")));
+                FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(LoginPacienteController.class.getResource("/org/example/clinica/paciente-page.fxml")));
                 Parent root = loader.load();
-
 
                 PacientePageController pacientePageController = loader.getController();
                 pacientePageController.setPacienteLogado(paciente);
@@ -53,7 +52,8 @@ public class LoginPacienteController {
                 stage.setScene(new Scene(root));
                 stage.show();
 
-                showAlert("Sucesso", "Seja bem-vindo(a), caríssimo(a) " + paciente.getNome() + "!", Alert.AlertType.INFORMATION);
+                showAlert("Sucesso", "Seja bem-vindo(a), caríssimo(a) " + paciente.getNome() + "!" +
+                        "\nSuspeita de dengue zika ou chikungunya? Seguir para a emergência!", Alert.AlertType.INFORMATION);
 
             } else {
                 showAlert("Falha", "Credenciais inválidas!", Alert.AlertType.ERROR);

@@ -31,7 +31,6 @@ public class LoginMedicoController {
     @FXML
     private static final MedicoRepository medicoRepository = new MedicoRepository();
 
-
     public void login(ActionEvent actionEvent) {
 
         try {
@@ -52,7 +51,8 @@ public class LoginMedicoController {
                 stage.setScene(new Scene(root));
                 stage.show();
 
-                showAlert("Sucesso", "Seja bem-vindo(a) " + medico.getNome() + "!", Alert.AlertType.INFORMATION);
+                showAlert("Sucesso", "Seja bem-vindo(a) " + medico.getNome() + "!" +
+                        "\nO Ministério da Saúde alerta para o surto de arboviroses!", Alert.AlertType.INFORMATION);
 
             } else {
                 showAlert("Falha", "Credenciais inválidas!", Alert.AlertType.ERROR);
@@ -66,7 +66,7 @@ public class LoginMedicoController {
 
 
 
-    private void showAlert(String title, String message, Alert.AlertType alertType) {
+    void showAlert(String title, String message, Alert.AlertType alertType) {
         Alert alert = new Alert(alertType);
         alert.setTitle(title);
         alert.setHeaderText(null);
