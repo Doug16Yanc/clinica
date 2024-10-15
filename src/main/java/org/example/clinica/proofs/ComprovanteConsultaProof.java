@@ -15,8 +15,8 @@ public class ComprovanteConsultaProof extends Stage {
 
     public ComprovanteConsultaProof(Consulta consulta) {
         setTitle("Comprovante de Consulta");
-        setWidth(500);
-        setHeight(400);
+        setWidth(700);
+        setHeight(500);
 
         comprovanteArea = new TextArea();
         comprovanteArea.setEditable(false);

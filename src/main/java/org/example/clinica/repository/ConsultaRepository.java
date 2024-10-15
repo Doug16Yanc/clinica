@@ -31,7 +31,7 @@ public class ConsultaRepository {
 
     public List<Consulta> buscarConsultasPorMedico(int medicoId) throws SQLException {
         String sql = """
-        SELECT c.*, p.id as paciente_id, p.nome as paciente_nome
+        SELECT c.*, p.id as paciente_id, p.nome as paciente_nome, p.email as paciente_email, p.telefone as paciente_telefone
         FROM consulta c
         JOIN paciente p ON c.paciente_id = p.id
         WHERE c.medico_id = ?
@@ -52,6 +52,8 @@ public class ConsultaRepository {
                 Paciente paciente = new Paciente();
                 paciente.setId(rs.getInt("paciente_id"));
                 paciente.setNome(rs.getString("paciente_nome"));
+                paciente.setEmail(rs.getString("paciente_email"));
+                paciente.setTelefone(rs.getString("paciente_telefone"));
                 consulta.setPaciente(paciente);
                 consulta.setStatus(rs.getBoolean("status"));
 
@@ -79,16 +81,16 @@ public class ConsultaRepository {
         }
     }
 
-    public void removerConsulta(Consulta consulta) throws SQLException {
-        String sql = "DELETE FROM consulta WHERE ID = ?";
+   /* public void atualizarConsulta(Consulta consulta) throws SQLException {
+        String sql = "UPDATE CONSULTA SET STATUS = ? WHERE ID = ?";
         try (PreparedStatement stmt = DatabaseConnection.getConnection().prepareStatement(sql)) {
+            stmt.setBoolean(1, true);
             stmt.setString(1, consulta.getId().toString());
             stmt.executeUpdate();
 
         } catch (SQLException e) {
-            System.err.println("Erro ao remover consulta: " + e.getMessage());
-            throw new SQLException("Erro ao tentar remover consulta do banco de dados.", e);
+            System.err.println("Erro ao atualizar consulta: " + e.getMessage());
+            throw new SQLException("Erro ao tentar atualizar consulta do banco de dados.", e);
         }
-    }
-
+    }*/
 }

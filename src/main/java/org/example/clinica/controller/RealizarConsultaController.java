@@ -52,7 +52,7 @@ public class RealizarConsultaController {
                 if (consulta == null || empty) {
                     setText(null);
                 } else {
-                    setText(" " + consulta.getPaciente().getNome() + "  " + consulta.getId() + " - " + consulta.getAgora());
+                    setText(" " + consulta.getPaciente().getNome() + "  " + consulta.getId());
                 }
             }
         });
@@ -77,6 +77,9 @@ public class RealizarConsultaController {
         MedicoPageController medicoPageController = loader.getController();
         medicoPageController.setMedicoLogado(medicoLogado);
 
+        Stage stageAtual = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stageAtual.close();
+
         Stage stage = new Stage();
         stage.setScene(new Scene(root));
         stage.show();
@@ -85,15 +88,19 @@ public class RealizarConsultaController {
     private void realizarConsulta(ActionEvent actionEvent) throws SQLException {
         Consulta consultaSelecionada = consultaComboBox.getValue();
 
-        if (consultaSelecionada == null) {
-            Alert alert = new Alert(Alert.AlertType.WARNING, "Por favor, selecione uma consulta válida.", ButtonType.OK);
-            alert.show();
-        } else {
+        if (consultaSelecionada != null) {
+            try{
+                consultaRepository.realizarConsulta(consultaSelecionada);
+            } catch (Exception e){
+                e.printStackTrace();
+            }
             ConsultaRealizadaProof consultaRealizadaProof = new ConsultaRealizadaProof(consultaSelecionada);
             consultaRealizadaProof.show();
-            consultaSelecionada.setStatus(true);
-            consultaRepository.realizarConsulta(consultaSelecionada);
-            //consultaRepository.removerConsulta(consultaSelecionada);
+
+        } else {
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Por favor, selecione uma consulta válida.", ButtonType.OK);
+            alert.show();
         }
+        consultaComboBox.getItems().remove(consultaSelecionada);
     }
 }

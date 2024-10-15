@@ -88,7 +88,7 @@ public class MedicoRepository {
         FROM consulta c
         JOIN medico m ON m.id = c.medico_id
         JOIN paciente p ON p.id = c.paciente_id
-        WHERE m.id = ?
+        WHERE m.id = ? AND c.status = 0
     """;
         List<Consulta> consultas = new ArrayList<>();
 

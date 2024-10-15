@@ -14,6 +14,7 @@ import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import org.example.clinica.model.Consulta;
 import org.example.clinica.model.Medico;
+import org.example.clinica.repository.ConsultaRepository;
 import org.example.clinica.repository.MedicoRepository;
 
 import java.sql.SQLException;
@@ -68,8 +69,8 @@ public class VerHistoricoController extends Stage {
     }
 
     public void listarHistoricoDeConsultas(Medico medico) throws SQLException {
-        MedicoRepository mr = new MedicoRepository();
-        List<Consulta> consultas = mr.pegarConsultasPorMedico(medico);
+        ConsultaRepository cr = new ConsultaRepository();
+        List<Consulta> consultas = cr.buscarConsultasPorMedico(medico.getId());
 
         if (!consultas.isEmpty()) {
             StringBuilder sb = new StringBuilder();

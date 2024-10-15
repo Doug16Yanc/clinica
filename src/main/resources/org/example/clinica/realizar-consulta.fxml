@@ -30,16 +30,16 @@
                     </children>
                 </AnchorPane>
                 <AnchorPane layoutX="432.0" prefHeight="606.0" prefWidth="474.0" styleClass="right-form" stylesheets="@style/style.css">
-                    <Label layoutX="89.0" layoutY="154.0" text="Selecione o paciente:" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                    <Label layoutX="24.0" layoutY="153.0" text="Selecione o paciente:" GridPane.columnIndex="0" GridPane.rowIndex="0">
                         <font>
                             <Font name="Arial" size="20.0" />
                         </font>
                     </Label>
-                    <ComboBox fx:id="consultaComboBox" layoutX="81.0" layoutY="193.0" prefWidth="300" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                    <ComboBox fx:id="consultaComboBox" layoutX="21.0" layoutY="193.0" prefHeight="24.0" prefWidth="436.0" GridPane.columnIndex="0" GridPane.rowIndex="1" />
 
                     <HBox alignment="center" spacing="20" GridPane.columnIndex="0" GridPane.rowIndex="4" />
-                    <Button fx:id="realizarConsulta" layoutX="121.0" layoutY="379.0" mnemonicParsing="false" onAction="#realizarConsulta" prefHeight="40.0" prefWidth="220.0" styleClass="marcarConsulta" stylesheets="@style/style.css" text="Realizar consulta" />
-                    <Button fx:id="sairBtn" layoutX="121.0" layoutY="436.0" mnemonicParsing="false" onAction="#sair" prefHeight="40.0" prefWidth="220.0" styleClass="sair-btn" stylesheets="@style/style.css" text="Sair" />
+                    <Button fx:id="realizarConsulta" layoutX="121.0" layoutY="328.0" mnemonicParsing="false" onAction="#realizarConsulta" prefHeight="40.0" prefWidth="220.0" styleClass="marcarConsulta" stylesheets="@style/style.css" text="Realizar consulta" />
+                    <Button fx:id="sairBtn" layoutX="121.0" layoutY="391.0" mnemonicParsing="false" onAction="#sair" prefHeight="40.0" prefWidth="220.0" styleClass="sair-btn" stylesheets="@style/style.css" text="Sair" />
                 </AnchorPane>
             </children>
         </AnchorPane>

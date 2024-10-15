@@ -47,8 +47,14 @@ public class PacientePageController {
 
     @FXML
     public void sair(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/org/example/clinica/initial-view.fxml")));
-        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+
+        FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(getClass().getResource("/org/example/clinica/initial-view.fxml")));
+        Parent root = loader.load();
+
+        Stage stageAtual = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stageAtual.close();
+
+        Stage stage = new Stage();
         stage.setScene(new Scene(root));
         stage.show();
     }
